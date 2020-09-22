@@ -5,7 +5,7 @@
 * 1. 导入
 >A. Pod导入（推荐）
 ```
-  pod 'SQLiteManager'
+  pod 'JXSQLiteManager'
 ```
 
 >B. 引入SQLiteManager目录下的文件文件:
@@ -19,11 +19,15 @@ SQLiteManager.swift
 
 创建的模型实现`SQLiteProtocol`协议即可
 ```
+import SQLiteManager
+
 class TestModel: NSObject, SQLiteProtocol {}
 struct TestModel: SQLiteProtocol {}
 ```
 
 ```
+import SQLiteManager
+
 switch sender.tag {
     case 0:
     SQLiteManager.default.insert(testModel)
