@@ -1,29 +1,46 @@
 # SQLiteManager
+对SQLite.swift的封装，使用swift的反射原理，Model直接存储.获取. 无需再转换,增删改查. 脱离sql语句,不需要添加相关的绑定操作，直接完成转换。
 
-[![CI Status](https://img.shields.io/travis/1540428743@qq.com/SQLiteManager.svg?style=flat)](https://travis-ci.org/1540428743@qq.com/SQLiteManager)
-[![Version](https://img.shields.io/cocoapods/v/SQLiteManager.svg?style=flat)](https://cocoapods.org/pods/SQLiteManager)
-[![License](https://img.shields.io/cocoapods/l/SQLiteManager.svg?style=flat)](https://cocoapods.org/pods/SQLiteManager)
-[![Platform](https://img.shields.io/cocoapods/p/SQLiteManager.svg?style=flat)](https://cocoapods.org/pods/SQLiteManager)
-
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
-
-## Installation
-
-SQLiteManager is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```ruby
-pod 'SQLiteManager'
+### 使用方法
+* 1. 导入
+>A. Pod导入（推荐）
+```
+  pod 'SQLiteManager'
 ```
 
-## Author
+>B. 引入SQLiteManager目录下的文件文件:
+```
+SQLMirrorModel.swift
+SQLitePropModel.swift
+SQLiteManager.swift
+```
 
-1540428743@qq.com, 1540428743@qq.com
+- 2. 使用
 
-## License
+创建的模型实现`SQLiteProtocol`协议即可
+```
+class TestModel: NSObject, SQLiteProtocol {}
+struct TestModel: SQLiteProtocol {}
+```
 
-SQLiteManager is available under the MIT license. See the LICENSE file for more info.
+```
+switch sender.tag {
+    case 0:
+    SQLiteManager.default.insert(testModel)
+    case 1:
+    SQLiteManager.default.delete(testModel)
+    case 2:
+    testModel.name = "Ree"
+    testModel.create_time = Int(Date().timeIntervalSince1970)
+    SQLiteManager.default.update(testModel)
+    case 3:
+    let arr = SQLiteManager.default.select(TestModel.tableName)
+    let models = arr.map({ TestModel.deserialize(from: $0) })
+    print("查询到数据: \(models)")
+    case 4:
+    SQLiteManager.default.drop(TestModel.tableName)
+    default:
+    break
+}
+```
+

@@ -9,26 +9,20 @@
 Pod::Spec.new do |s|
   s.name             = 'SQLiteManager'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of SQLiteManager.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
+  s.summary          = '对 SQLite.swift 的模型封装'
+  
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+  对SQLite.swift的封装，使用swift的反射原理，Model直接存储.获取. 无需再转换,增删改查. 脱离sql语句,不需要添加相关的绑定操作，直接完成转换。
                        DESC
 
-  s.homepage         = 'https://github.com/1540428743@qq.com/SQLiteManager'
+  s.homepage         = 'https://github.com/jeromexiong/SQLiteManager'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { '1540428743@qq.com' => '1540428743@qq.com' }
-  s.source           = { :git => 'https://github.com/1540428743@qq.com/SQLiteManager.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.author           = { 'Jerome Xiong' => 'jeromexxc@gmail.com' }
+  s.source           = { :git => 'https://github.com/jeromexiong/SQLiteManager.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '8.0'
+  s.swift_version = '5.0'
 
   s.source_files = 'SQLiteManager/Classes/**/*'
   
@@ -38,5 +32,5 @@ TODO: Add long description of the pod here.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'SQLite.swift', '~> 0.12.2'
 end

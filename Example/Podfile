@@ -2,6 +2,7 @@ use_frameworks!
 
 target 'SQLiteManager_Example' do
   pod 'SQLiteManager', :path => '../'
+  pod 'HandyJSON'
 
   target 'SQLiteManager_Tests' do
     inherit! :search_paths
