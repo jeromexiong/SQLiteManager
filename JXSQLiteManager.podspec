@@ -7,7 +7,7 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'SQLiteManager'
+  s.name             = 'JXSQLiteManager'
   s.version          = '0.1.0'
   s.summary          = '对 SQLite.swift 的模型封装'
   
