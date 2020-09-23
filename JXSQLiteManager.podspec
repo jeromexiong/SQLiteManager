@@ -1,14 +1,6 @@
-#
-# Be sure to run `pod lib lint SQLiteManager.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see https://guides.cocoapods.org/syntax/podspec.html
-#
-
 Pod::Spec.new do |s|
   s.name             = 'JXSQLiteManager'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = '对 SQLite.swift 的模型封装'
   
   s.description      = <<-DESC

@@ -30,7 +30,7 @@
 
 /* Begin PBXFileReference section */
 		03897A3B8D01B910A12655A0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		0CF754134ADE663D5856200D /* SQLiteManager.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SQLiteManager.podspec; path = ../SQLiteManager.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		0CF754134ADE663D5856200D /* JXSQLiteManager.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = JXSQLiteManager.podspec; path = ../JXSQLiteManager.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		30956B932519F51B005D99AB /* TestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModel.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* SQLiteManager_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SQLiteManager_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -135,7 +135,7 @@
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				0CF754134ADE663D5856200D /* SQLiteManager.podspec */,
+				0CF754134ADE663D5856200D /* JXSQLiteManager.podspec */,
 				A6F8EF33512AEA26A24B66A2 /* README.md */,
 				03897A3B8D01B910A12655A0 /* LICENSE */,
 			);
