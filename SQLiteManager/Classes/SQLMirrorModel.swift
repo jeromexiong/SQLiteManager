@@ -30,7 +30,7 @@ public struct SQLMirrorModel {
         var props = [SQLitePropModel]()
         for case let (key?, value) in mirror.children {
             let model = SQLitePropModel(key, value: value, primary: object.primaryKey == key)
-            guard object.ignoreKeys?.contains(key) == false else {
+            if object.ignoreKeys?.contains(key) == true {
                 continue
             }
             props.append(model)
